@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/contato.css">
+</head>
+<body class="container">
+    <header class="top-nav">
+        <h1><a id="link-home" href="../index.html">Home</a></h1>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <nav class="navbar menu">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-contact">
+        <h1>Entre em Contato</h1>
+        <p>Conte-nos sua dúvida ou crítica</p>
+
+        <form class="contato" action="enviar_formulario.php" method="post">
+            <div class="form-control">
+                <input type="text" required>
+                <label>
+                    <span style="transition-delay:0ms">N</span><span style="transition-delay:50ms">o</span><span style="transition-delay:100ms">m</span><span style="transition-delay:150ms">e</span>
+                </label>
+            </div>
+            <div class="form-control">
+                <input type="email" required>
+                <label>
+                    <span style="transition-delay:0ms">E</span><span style="transition-delay:50ms">-</span><span style="transition-delay:100ms">m</span><span style="transition-delay:150ms">a</span><span style="transition-delay:200ms">i</span><span style="transition-delay:250ms">l</span>
+                </label>
+            </div>
+            <div class="form-control">
+                <input type="text" required>
+                <label>
+                    <span style="transition-delay:0ms">A</span><span style="transition-delay:50ms">s</span><span style="transition-delay:100ms">s</span><span style="transition-delay:150ms">s</span><span style="transition-delay:200ms">u</span><span style="transition-delay:250ms">n</span><span style="transition-delay:300ms">t</span><span style="transition-delay:350ms">o</span>
+                </label>
+            </div>
+            <div class="form-control">
+                <textarea class="input" id="textarea" required></textarea>
+                <label>
+                    <span style="transition-delay:0ms">M</span><span style="transition-delay:50ms">e</span><span style="transition-delay:100ms">n</span><span style="transition-delay:150ms">s</span><span style="transition-delay:200ms">a</span><span style="transition-delay:250ms">g</span><span style="transition-delay:300ms">e</span><span style="transition-delay:350ms">m</span>
+                </label>
+            </div>
+            <button class="boton-elegante">Enviar</button>
+            <button class="boton-elegante">Redefinir</button>
+        </form>
+        
+
+        <h2>Informações de Contato</h2>
+        <p>E-mail: atilacleiton52@gmail.com</p>
+        <p>Telefone: (11) 1234-5678</p>
+
+        <h2>Horário de Atendimento</h2>
+        <p>Segunda a Sexta: 9:00 - 18:00</p>
+        <p>Sábado: 10:00 - 14:00</p>
+
+        <h2>Localização</h2>
+        <div id="mapa" style="width: 100%; height: 400px;"></div>
+
+        <script>
+            function initMap() {
+                var localizacao = {lat: -23.550520, lng: -46.633308};
+                var map = new google.maps.Map(document.getElementById('mapa'), {
+                    zoom: 15,
+                    center: localizacao
+                });
+                var marker = new google.maps.Marker({
+                    position: localizacao,
+                    map: map
+                });
+            }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+    </main>
+    <footer>
+        <nav class="redes">
+            <!---<a href="https://instagram.com/vasck_at" target="_blank">
+                <img src="../img/InstagramLogo.png" alt="Instagram">
+            </a>
+            
+            <a href="https://www.facebook.com/atila.cleiton.92/" target="_blank">
+                <img src="../img/FacebookLogo.png" alt="Facebook">
+            </a>
+            --->
+        </nav>
+        <p>&copy; 2024, todos os direitos reservados a Átila Vasconcelos.</p>
+    </footer>
+    <script src="../scripts/script.js"></script>
+</body>
+</html>

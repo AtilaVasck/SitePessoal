@@ -1,0 +1,182 @@
+$form-background: #212121;
+$form-focus-color: #666666;
+$form-label-color: #292929;
+$form-border-color: #292929;
+
+header {
+    background-color: #fff;
+}
+
+footer {
+    background-color: #fff;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    --s: 84px;
+    --c1: #f2f2f2;
+    --c2: #cdcbcc;
+    --c3: #999999;
+    --_g: 0 120deg, #0000 0;
+    background: conic-gradient(
+        from 0deg at calc(500% / 6) calc(100% / 3),
+        var(--c3) var(--_g)
+    ),
+    conic-gradient(
+        from -120deg at calc(100% / 6) calc(100% / 3),
+        var(--c2) var(--_g)
+    ),
+    conic-gradient(
+        from 120deg at calc(100% / 3) calc(500% / 6),
+        var(--c1) var(--_g)
+    ),
+    conic-gradient(
+        from 120deg at calc(200% / 3) calc(500% / 6),
+        var(--c1) var(--_g)
+    ),
+    conic-gradient(
+        from -180deg at calc(100% / 3) 50%,
+        var(--c2) 60deg,
+        var(--c1) var(--_g)
+    ),
+    conic-gradient(
+        from 60deg at calc(200% / 3) 50%,
+        var(--c1) 60deg,
+        var(--c3) var(--_g)
+    ),
+    conic-gradient(
+        from -60deg at 50% calc(100% / 3),
+        var(--c1) 120deg,
+        var(--c2) 0 240deg,
+        var(--c3) 0
+    );
+    background-size: calc(var(--s) * 1.732) var(--s);
+}
+
+
+.main-contact {
+    margin-top: 70px;
+    width: 400px;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 1;
+    margin-left: auto; /* Adicionado */
+    margin-right: auto; /* Adicionado */
+}
+
+.contato {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    background-color: $form-background;
+    width: 60%;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 5px;
+
+    &:focus {
+    color: $form-focus-color;
+    background-color: $form-background;
+    outline-color: $form-focus-color;
+    box-shadow: -3px -3px 15px $form-focus-color;
+    transition: .1s;
+    transition-property: box-shadow;
+    }
+}
+
+.boton-elegante {
+    padding: 15px 30px;
+    margin-top: 15px;
+    border: 2px solid #2c2c2c;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+
+&::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 70%);
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+
+    &:hover {
+    &::after {
+        transform: scale(4);
+    }
+
+    border-color: $form-focus-color;
+    background: #292929;
+    }
+}
+
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 190px;
+
+    input,
+    textarea {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px $form-border-color solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: $form-label-color;
+    resize: none; // Para o textarea não ser redimensionável
+}
+
+    input:focus,
+    input:valid,
+    textarea:focus,
+    textarea:valid {
+    outline: 0;
+    border-bottom-color: $form-border-color;
+}
+
+label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+
+    span {
+        display: inline-block;
+        font-size: 18px;
+        min-width: 5px;
+        color: $form-label-color;
+        transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+}
+
+    input:focus + label span,
+    input:valid + label span,
+    textarea:focus + label span,
+    textarea:valid + label span {
+    color: $form-focus-color;
+    transform: translateY(-30px);
+  }
+}

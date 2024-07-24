@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Átila</title>
+    <link rel="stylesheet" href="../styles/style.scss">
+    <link rel="stylesheet" href="../styles/sobre.css">
+</head>
+<body>
+    <header class="top-nav">
+        <h1><a id="link-home" href="../index.html">Home</a></h1>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <nav class="navbar menu">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about-section">
+            <h2>Sobre Átila</h2>
+            <p>Olá! Eu sou Átila, um desenvolvedor apaixonado por criar soluções digitais inovadoras. Com anos de experiência em desenvolvimento web, tenho ajudado empresas a transformar suas ideias em realidade.</p>
+        </section>
+        
+        <section class="mission-section">
+            <h2>Minha Missão</h2>
+            <p>Minha missão é proporcionar a melhor experiência digital através de inovação, tecnologia e design. Estou comprometido em entender as necessidades dos meus clientes e transformar suas ideias em soluções eficientes e impactantes.</p>
+        </section>
+        
+        <section class="history-section">
+            <h2>Minha História</h2>
+            <p>Desde 2020, venho trabalhando como desenvolvedor web freelancer, entregando projetos de sucesso para diversos clientes. Minha jornada começou com um interesse profundo por tecnologia e design, e ao longo dos anos, tenho aprimorado minhas habilidades para oferecer sempre o melhor.</p>
+        </section>
+        
+        <section class="portfolio-section">
+            <h2>Meus Trabalhos</h2>
+            <div class="portfolio">
+                <div class="portfolio-item" onclick="showModal('site1')">
+                    <img src="../img/site1-thumbnail.jpg" alt="Site 1" class="portfolio-img">
+                    <h3>Site 1</h3>
+                </div>
+                <div class="portfolio-item" onclick="showModal('site2')">
+                    <img src="../img/site2-thumbnail.jpg" alt="Site 2" class="portfolio-img">
+                    <h3>Site 2</h3>
+                </div>
+                <div class="portfolio-item" onclick="showModal('site3')">
+                    <img src="../img/site3-thumbnail.jpg" alt="Site 3" class="portfolio-img">
+                    <h3>Site 3</h3>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modal para mostrar os sites -->
+        <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <img id="modal-img" src="" alt="Site">
+                <div id="modal-caption"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <nav class="redes">
+            <!--<a href="https://instagram.com/vasck_at" target="_blank">
+                <img src="../img/InstagramLogo.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/atila.cleiton.92/" target="_blank">
+                <img src="../img/FacebookLogo.png" alt="Facebook">
+            </a>--->
+        </nav>
+        <p>&copy; 2024, todos os direitos reservados a Átila Vasconcelos.</p>
+    </footer>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

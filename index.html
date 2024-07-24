@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Perfil</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <h1><a id="link-home" href="./index.html">Home</a></h1>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <nav class="navbar menu">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./pages/sobre.html">Sobre</a></li>
+                <li><a href="./pages/contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <div id="perfil"></div>
+        </article>
+        <div class="btn">
+            <a href="./curriculo.pdf" download>Download Currículo</a>
+        </div>
+        <section class="seguidores">
+            <h2>Seguidores</h2>
+            <div id="seguidores-gh"></div>
+            <button onclick="window.open('https://github.com/AtilaVasck?tab=followers', '_blank')">Mais Seguidores</button>
+        </section>
+    </main>
+    <footer>
+        <nav class="redes">
+            <!--<a href="https://instagram.com/vasck_at" target="_blank">
+                <img src="./img/InstagramLogo.png" alt="Instagram">
+            </a>
+           <a href="https://www.facebook.com/atila.cleiton.92/" target="_blank">
+                <img src="./img/FacebookLogo.png" alt="Facebook">
+            </a>
+            --->
+        </nav>
+        <p>&copy; 2024, todos os direitos reservados a Átila Vasconcelos.</p>
+    </footer>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
